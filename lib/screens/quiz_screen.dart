@@ -10,7 +10,8 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
-  final controller = FlipCardController();
+  // Fixed: Using GestureFlipCardController for the GestureFlipCard widget
+  final controller = GestureFlipCardController();
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +90,11 @@ class _QuizScreenState extends State<QuizScreen> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("Incorrect"), duration: Duration(milliseconds: 500)),
+                    );
+                  },
                   icon: const Icon(Icons.close, color: Colors.white),
                   label: const Text("Incorrect"),
                   style: ElevatedButton.styleFrom(
@@ -98,7 +103,11 @@ class _QuizScreenState extends State<QuizScreen> {
                   ),
                 ),
                 ElevatedButton.icon(
-                  onPressed: () {},
+                  onPressed: () {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text("Correct!"), duration: Duration(milliseconds: 500)),
+                    );
+                  },
                   icon: const Icon(Icons.check, color: Colors.white),
                   label: const Text("Correct"),
                   style: ElevatedButton.styleFrom(

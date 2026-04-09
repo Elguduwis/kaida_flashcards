@@ -8,8 +8,9 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  # Downgraded to compatible version per build logs
-  flutter_flip_card: ^0.0.6 
+  flutter_flip_card: ^0.0.6
+  # Google Mobile Ads for monetization
+  google_mobile_ads: ^7.0.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
