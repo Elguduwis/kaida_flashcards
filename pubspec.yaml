@@ -8,8 +8,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.6
-  # Added for 3D flip animation
-  flutter_flip_card: ^0.1.2 
+  # Downgraded to compatible version per build logs
+  flutter_flip_card: ^0.0.6 
 dev_dependencies:
   flutter_test:
     sdk: flutter
